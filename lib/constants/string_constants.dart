@@ -1,5 +1,4 @@
 class StringConstants {
-
   static const loginRegisterText = "Login / Register";
   static const emailIdText = "Email ID";
   static const emailIdHintText = "Enter your Email ID";
