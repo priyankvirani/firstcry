@@ -23,7 +23,7 @@ class AppButton extends StatelessWidget {
       required this.onPressed,
       this.backgroundColor = white,
       this.borderColor = white,
-      this.borderRadius = SizeConstants.circularRadius_10,
+      this.borderRadius = SizeConstants.circularRadius_4,
       this.height = SizeConstants.dimen_45,
       this.width,
       this.margin = const EdgeInsets.only(bottom: SizeConstants.padding_18),

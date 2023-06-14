@@ -52,6 +52,7 @@ class SizeConstants {
   static const double radius_10 = 10;
 
   //Circular Radius
+  static const double circularRadius_4 = 4.0;
   static const double circularRadius_10 = 10.0;
   static const double circularRadius_12 = 12.0;
   static const double circularRadius_15 = 15.0;
