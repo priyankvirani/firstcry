@@ -27,8 +27,7 @@ class AppButton extends StatelessWidget {
       this.height = SizeConstants.dimen_45,
       this.width,
       this.margin = const EdgeInsets.only(bottom: SizeConstants.padding_18),
-      this.padding =
-          const EdgeInsets.symmetric(horizontal: SizeConstants.padding_18),
+      this.padding,
       this.textColor = white,
       this.textSize = SizeConstants.dimen_14,
       this.suffixIcon})

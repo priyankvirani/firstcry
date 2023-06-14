@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/app_colors.dart';
 import '../constants/size_constants.dart';
 
-class AppManageAccountTextFiled extends StatefulWidget {
+class AppTextFiled extends StatefulWidget {
   final TextEditingController controller;
   final VoidCallback? onTap;
   final Widget? suffixIcon;
@@ -13,7 +13,7 @@ class AppManageAccountTextFiled extends StatefulWidget {
   final FormFieldValidator? validator;
   final int maxLine;
 
-  const AppManageAccountTextFiled(
+  const AppTextFiled(
       {Key? key,
       required this.controller,
       this.onTap,
@@ -26,11 +26,10 @@ class AppManageAccountTextFiled extends StatefulWidget {
       : super(key: key);
 
   @override
-  State<AppManageAccountTextFiled> createState() =>
-      _AppManageAccountTextFiledState();
+  State<AppTextFiled> createState() => _AppTextFiledState();
 }
 
-class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
+class _AppTextFiledState extends State<AppTextFiled> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -40,15 +39,6 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
               top: widget.readOnly
                   ? SizeConstants.margin_0
                   : SizeConstants.margin_10),
-          padding: widget.readOnly
-              ? const EdgeInsets.symmetric(
-                  horizontal: SizeConstants.padding_20,
-                  vertical: SizeConstants.padding_10)
-              : const EdgeInsets.only(
-                  left: SizeConstants.padding_20,
-                  right: SizeConstants.padding_20,
-                  bottom: SizeConstants.padding_15,
-                  top: SizeConstants.padding_10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(SizeConstants.radius_20),
               color: white),
@@ -68,22 +58,19 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: grey03,
-                          width: SizeConstants.dimen_1_5),
+                          color: grey03, width: SizeConstants.dimen_1_5),
                     ),
               enabledBorder: widget.readOnly
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: grey03,
-                          width: SizeConstants.dimen_1_5),
+                          color: grey03, width: SizeConstants.dimen_1_5),
                     ),
               focusedBorder: widget.readOnly
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: grey03,
-                          width: SizeConstants.dimen_1_5),
+                          color: grey03, width: SizeConstants.dimen_1_5),
                     ),
             ),
             maxLines: widget.maxLine,
@@ -100,23 +87,12 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
             ? const SizedBox()
             : Positioned(
                 top: 0,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: SizeConstants.padding_10,
-                      vertical: SizeConstants.padding_2),
-                  margin: const EdgeInsets.only(left: SizeConstants.margin_20),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        SizeConstants.radius_60,
-                      ),
-                      color: orange),
-                  child: Text(widget.label,
-                      textAlign: TextAlign.start,
-                      style: const TextStyle(
-                        color: white,
-                        fontSize: SizeConstants.fontSize_12,
-                      )),
-                ),
+                child: Text(widget.label,
+                    textAlign: TextAlign.start,
+                    style: const TextStyle(
+                      color: black,
+                      fontSize: SizeConstants.fontSize_14,
+                    )),
               ),
       ],
     );
