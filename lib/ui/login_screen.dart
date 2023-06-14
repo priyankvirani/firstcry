@@ -1,3 +1,4 @@
+import 'package:firstcry/widgets/app_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,14 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Column(children: [
+        AppButton(
+          label: 'Continue',
+          backgroundColor: CupertinoColors.destructiveRed,
+          onPressed: () {},
+        )
+      ]),
+    );
   }
 }

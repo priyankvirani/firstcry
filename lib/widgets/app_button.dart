@@ -21,15 +21,15 @@ class AppButton extends StatelessWidget {
       {Key? key,
       required this.label,
       required this.onPressed,
-      this.backgroundColor = momentumPaper,
-      this.borderColor = momentumPaper,
-      this.borderRadius = SizeConstants.circularRadius_100,
+      this.backgroundColor = white,
+      this.borderColor = white,
+      this.borderRadius = SizeConstants.circularRadius_10,
       this.height = SizeConstants.dimen_45,
       this.width,
       this.margin = const EdgeInsets.only(bottom: SizeConstants.padding_18),
       this.padding =
           const EdgeInsets.symmetric(horizontal: SizeConstants.padding_18),
-      this.textColor = momentumPaper,
+      this.textColor = white,
       this.textSize = SizeConstants.dimen_14,
       this.suffixIcon})
       : super(key: key);
@@ -44,7 +44,7 @@ class AppButton extends StatelessWidget {
       child: OutlinedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          foregroundColor: momentumPaper,
+          foregroundColor: white,
           backgroundColor: backgroundColor,
           disabledBackgroundColor: Colors.grey.withOpacity(0.4),
           textStyle: TextStyle(color: textColor, fontWeight: FontWeight.bold),

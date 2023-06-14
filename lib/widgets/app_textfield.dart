@@ -51,7 +51,7 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
                   top: SizeConstants.padding_10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(SizeConstants.radius_20),
-              color: momentumPaper),
+              color: white),
           child: TextFormField(
             controller: widget.controller,
             decoration: InputDecoration(
@@ -62,36 +62,36 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
               suffixIcon: widget.suffixIcon ?? const SizedBox(),
               hintText: widget.hint,
               hintStyle: const TextStyle(
-                color: momentumGrey02,
+                color: grey02,
               ),
               border: widget.readOnly
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: momentumGrey03,
+                          color: grey03,
                           width: SizeConstants.dimen_1_5),
                     ),
               enabledBorder: widget.readOnly
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: momentumGrey03,
+                          color: grey03,
                           width: SizeConstants.dimen_1_5),
                     ),
               focusedBorder: widget.readOnly
                   ? InputBorder.none
                   : const UnderlineInputBorder(
                       borderSide: BorderSide(
-                          color: momentumGrey03,
+                          color: grey03,
                           width: SizeConstants.dimen_1_5),
                     ),
             ),
             maxLines: widget.maxLine,
             style: const TextStyle(
-              color: momentumGrey01,
+              color: grey01,
             ),
             readOnly: widget.readOnly,
-            cursorColor: momentumPaper,
+            cursorColor: white,
             onTap: widget.onTap,
             validator: widget.validator,
           ),
@@ -109,11 +109,11 @@ class _AppManageAccountTextFiledState extends State<AppManageAccountTextFiled> {
                       borderRadius: BorderRadius.circular(
                         SizeConstants.radius_60,
                       ),
-                      color: momentumBlue),
+                      color: orange),
                   child: Text(widget.label,
                       textAlign: TextAlign.start,
                       style: const TextStyle(
-                        color: momentumPaper,
+                        color: white,
                         fontSize: SizeConstants.fontSize_12,
                       )),
                 ),
