@@ -40,7 +40,7 @@ class _ProductsScreenState extends State<ProductsScreen>
               crossAxisCount: 2,
               mainAxisSpacing: 2.0,
               crossAxisSpacing: 2.0,
-              childAspectRatio: 0.75,
+              childAspectRatio: 0.80,
             ),
             itemCount: productProvider.products.length,
             itemBuilder: (BuildContext context, int index) {
@@ -52,10 +52,14 @@ class _ProductsScreenState extends State<ProductsScreen>
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const SizedBox(
+                        height: SizeConstants.margin_8,
+                      ),
                       Center(
                         child: SizedBox(
                           height: MediaQuery.of(context).size.height * 0.25,
                           child: Stack(
+                            alignment: Alignment.center,
                             children: [
                               CachedNetworkImage(
                                 imageUrl: productProvider.products[index].image,
@@ -65,6 +69,69 @@ class _ProductsScreenState extends State<ProductsScreen>
                                 errorWidget: (context, url, error) =>
                                     const Icon(Icons.error),
                               ),
+                              const Align(
+                                alignment: Alignment.topRight,
+                                child: Icon(
+                                  Icons.bookmark_outline,
+                                  color: grey03,
+                                  size: 18,
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.bottomLeft,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 8.0),
+                                  child: Container(
+                                    height: 18,
+                                    width: 70,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.white,
+                                      border:
+                                          Border.all(color: grey03, width: 0.2),
+                                    ),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          '${productProvider.products[index].rating.rate} ',
+                                          style: const TextStyle(
+                                            color: black,
+                                            fontSize: 10,
+                                          ),
+                                        ),
+                                        const Icon(
+                                          Icons.star,
+                                          size: 10,
+                                          color: Colors.green,
+                                        ),
+                                        const SizedBox(
+                                          width: SizeConstants.margin_2,
+                                        ),
+                                        const VerticalDivider(
+                                          width: 1,
+                                          color: Colors.black,
+                                          thickness: 0.2,
+                                        ),
+                                        const SizedBox(
+                                          width: SizeConstants.margin_2,
+                                        ),
+                                        Text(
+                                          '${productProvider.products[index].rating.count}',
+                                          style: const TextStyle(
+                                            color: black,
+                                            fontSize: 10,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -74,6 +141,7 @@ class _ProductsScreenState extends State<ProductsScreen>
                       ),
                       Text(
                         productProvider.products[index].title,
+                        maxLines: 2,
                         style: const TextStyle(
                           color: black,
                           fontSize: 12,
