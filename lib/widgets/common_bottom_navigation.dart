@@ -33,7 +33,7 @@ class CommonBottomNavigation extends StatelessWidget {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.play_circle_outline, size: SizeConstants.height_23),
-          label: 'Explore',
+          label: 'Products',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.heart_broken_sharp, size: SizeConstants.height_23),

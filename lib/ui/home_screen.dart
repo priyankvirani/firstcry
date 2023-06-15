@@ -8,6 +8,7 @@ import '../constants/app_assets.dart';
 import '../constants/app_colors.dart';
 import '../widgets/common_bottom_navigation.dart';
 import '../widgets/my_drawer.dart';
+import 'home/products.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   final List<Widget> _widgetOptions = <Widget>[
     ShoppingScreen(),
-    Container(),
+    ProductsScreen(),
     Container(),
     Container(),
     Container(),

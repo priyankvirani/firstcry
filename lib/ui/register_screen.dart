@@ -75,17 +75,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     AppTextFiled(
                       controller: emailID,
-                      hint: StringConstants.emailIdHintText,
-                      label: StringConstants.emailIdText,
+                      hint: StringConstants.userNameHintText,
+                      label: StringConstants.userNameText,
                       validator: (value) {
                         if (value.toString().isEmpty) {
-                          return StringConstants.emailIdErrorText;
+                          return StringConstants.userNameErrorText;
                         } else {
                           return RegExp(
                                       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                   .hasMatch(value.toString())
                               ? null
-                              : StringConstants.emailIdValidErrorText;
+                              : StringConstants.userNameValidErrorText;
                         }
                       },
                     ),

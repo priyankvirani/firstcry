@@ -9,13 +9,13 @@ class AppUtils {
       throw Exception('Could not launch $url');
     }
   }
-  static void showToast(String message) {
+  static void showToast(String message,{Color color= Colors.green}) {
     Fluttertoast.showToast(
         msg: message,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 1,
-        backgroundColor: Colors.green,
+        backgroundColor: color,
         textColor: white,
         fontSize: 14.0);
   }
