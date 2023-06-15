@@ -3,6 +3,7 @@ class StringConstants {
   static const emailIdText = "Email ID";
   static const emailIdHintText = "Enter your Email ID";
   static const continueText = "CONTINUE";
+  static const logoutText = "Logout";
   static const loginScreenRegisterText = "New to FirstCry? Register Here";
 
   static const registerText = "Register";

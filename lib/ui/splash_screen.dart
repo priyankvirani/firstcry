@@ -26,9 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
     _timer = Timer(const Duration(seconds: 2), () async {
       if (isLogin) {
-        navKeyRoot.currentState?.pushReplacementNamed(AppRoutes.login);
-      } else {
         navKeyRoot.currentState?.pushReplacementNamed(AppRoutes.home);
+      } else {
+        navKeyRoot.currentState?.pushReplacementNamed(AppRoutes.login);
       }
     });
   }

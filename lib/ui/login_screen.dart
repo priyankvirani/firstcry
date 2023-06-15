@@ -77,6 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     SharedPref.pref!.setBool(Preferences.IS_USER_LOGIN, true);
+                    navKeyRoot.currentState?.pushReplacementNamed(AppRoutes.home);
                   }
                 },
               ),

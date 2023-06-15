@@ -8,6 +8,8 @@ import 'package:firstcry/widgets/app_textfield.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../app.dart';
+import '../configs/app_routes.dart';
 import '../constants/app_assets.dart';
 import '../constants/app_colors.dart';
 import '../constants/app_fonts.dart';
@@ -142,6 +144,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     SharedPref.pref!.setBool(Preferences.IS_USER_LOGIN, true);
+                    navKeyRoot.currentState
+                        ?.pushReplacementNamed(AppRoutes.home);
                   }
                 },
               ),
