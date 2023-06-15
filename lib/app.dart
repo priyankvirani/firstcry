@@ -27,8 +27,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       supportedLocales: const [
         Locale('en', ''),
       ],
-      //initialRoute: '/',
-      initialRoute: AppRoutes.home,
+      initialRoute: '/',
       routes: {
         '/': (context) => const SplashScreen(),
         AppRoutes.login: (context) => const LoginScreen(),

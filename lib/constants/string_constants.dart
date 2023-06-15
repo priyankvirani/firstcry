@@ -6,6 +6,10 @@ class StringConstants {
   static const logoutText = "Logout";
   static const loginScreenRegisterText = "New to FirstCry? Register Here";
 
+  static const shopCategory = "Shop By Category";
+
+
+
   static const registerText = "Register";
   static const fullNameText = "Full Name";
   static const fullNameHintText = "Enter your Full Name";
@@ -20,4 +24,8 @@ class StringConstants {
   static const fullNameErrorText = "Please Enter Your Full Name";
   static const passwordErrorText = "Please Enter Your Password";
   static const passwordValidErrorText = "Please Enter Valid Your Password";
+
+  static const selectLocation = "Select a location to see product availability";
+
+
 }

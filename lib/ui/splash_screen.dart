@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     bool isLogin = SharedPref.pref!.getBool(Preferences.IS_USER_LOGIN) ?? false;
-
+      print('isLogin $isLogin');
     _timer = Timer(const Duration(seconds: 2), () async {
       if (isLogin) {
         navKeyRoot.currentState?.pushReplacementNamed(AppRoutes.home);

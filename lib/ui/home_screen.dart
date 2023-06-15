@@ -1,14 +1,13 @@
+import 'package:badges/badges.dart' as badges;
 import 'package:firstcry/constants/app_fonts.dart';
+import 'package:firstcry/ui/home/shopping.dart';
 import 'package:firstcry/utils/app_utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constants/app_assets.dart';
 import '../constants/app_colors.dart';
 import '../widgets/common_bottom_navigation.dart';
 import '../widgets/my_drawer.dart';
-
-import 'package:badges/badges.dart' as badges;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,8 +18,8 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
-  static List<Widget> _widgetOptions = <Widget>[
-    Container(),
+  final List<Widget> _widgetOptions = <Widget>[
+    ShoppingScreen(),
     Container(),
     Container(),
     Container(),
@@ -33,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  final GlobalKey<ScaffoldState> _key = new GlobalKey();
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
 
   ///function for app exit on double back press
   static const snackBarDuration = Duration(seconds: 3);
@@ -42,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<bool> onWillPop() {
     DateTime now = DateTime.now();
     if (backButtonPressTime == null ||
-        now.difference(backButtonPressTime!) > Duration(seconds: 2)) {
+        now.difference(backButtonPressTime!) > const Duration(seconds: 2)) {
       backButtonPressTime = now;
       AppUtils.showToast('Press again to exit the app');
 
@@ -65,15 +64,13 @@ class _HomeScreenState extends State<HomeScreen> {
             onTap: () {
               _key.currentState!.openDrawer();
             },
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(100.0),
-              child: Container(
-                width: 15,
-                height: 15,
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(100),
                 child: Image.asset(
                   AppAssets.kidsProfile,
-                  width: 15,
-                  height: 15,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -85,7 +82,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: const [
                   Text(
                     'Shop for,',
-                    style: TextStyle(fontSize: 12, color: black),
+                    style: TextStyle(
+                        fontSize: 13,
+                        fontFamily: AppFonts.robotoBold,
+                        fontWeight: FontWeight.bold,
+                        color: black),
                   ),
                   SizedBox(
                     width: 2,
@@ -102,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const Text(
                 'Hriday 1Y M,',
-                style: TextStyle(fontSize: 12, color: black),
+                style: TextStyle(fontSize: 11, color: black),
               ),
             ],
           ),
