@@ -3,7 +3,7 @@ class StringConstants {
   static const emailIdText = "Email ID";
   static const emailIdHintText = "Enter your Email ID";
   static const continueText = "CONTINUE";
-  static const loginScreenRegisterText = "new to FirstCry? Register Here";
+  static const loginScreenRegisterText = "New to FirstCry? Register Here";
 
   static const registerText = "Register";
   static const fullNameText = "Full Name";
@@ -15,6 +15,8 @@ class StringConstants {
 
   //Error msg
   static const emailIdErrorText = "Please Enter Your Email ID";
+  static const emailIdValidErrorText = "Please Enter Your Valid Email ID";
   static const fullNameErrorText = "Please Enter Your Full Name";
-  static const passwordErrorText = "Please Enter Your  Password";
+  static const passwordErrorText = "Please Enter Your Password";
+  static const passwordValidErrorText = "Please Enter Valid Your Password";
 }

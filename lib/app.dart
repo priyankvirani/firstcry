@@ -23,10 +23,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     return MaterialApp(
       navigatorKey: navKeyRoot,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Roboto'),
       supportedLocales: const [
         Locale('en', ''),
       ],
-      initialRoute: '/',
+      //initialRoute: '/',
+      initialRoute: AppRoutes.home,
       routes: {
         '/': (context) => const SplashScreen(),
         AppRoutes.login: (context) => const LoginScreen(),

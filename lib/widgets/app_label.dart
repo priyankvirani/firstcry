@@ -7,7 +7,7 @@ Widget label(String value) {
     value,
     style: const TextStyle(
       color: black,
-      fontSize: SizeConstants.fontSize_16,
+      fontSize: SizeConstants.fontSize_18,
       fontWeight: FontWeight.bold,
     ),
   );
